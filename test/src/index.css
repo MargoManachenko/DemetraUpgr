@@ -1,0 +1,377 @@
+body {
+    margin: 0;
+    font-family: 'Brandon_bld', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    display: grid;
+    min-height: 100vh;
+    background-image: url('./public/background3.jpg');
+    background-size: cover;
+
+}
+
+.wrapper a {
+    text-decoration: none;
+}
+
+.wrapper .main.main-content h1 {
+    font-family: BickhamScriptThree, sans-serif;
+    font-size: 74px;
+    letter-spacing: 0.6px;
+    font-weight: normal;
+    text-align: center;
+    margin: 0;
+    text-shadow: 0 1px 4px rgba(25, 25, 25, 0);
+}
+
+.wrapper .main.main-content h1 {
+    color: #6c6c6c;
+}
+
+.wrapper .main.main-content .background {
+    position: absolute;
+    margin: -1% 0px 0% 4%;
+    height: 125%;
+}
+
+.wrapper h2,
+.wrapper h3 {
+    font-family: Brandon_light, sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: 4px;
+    margin: auto;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: #b5b5b5;
+}
+
+.wrapper h3 {
+    border-bottom: none;
+    font-size: 18px;
+}
+
+.main .add-tool-form h3 {
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.main .add-tool-form .error {
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    color: white;
+}
+
+.main .add-tool-form .error:last-child {
+    margin-bottom: 0;
+}
+
+.wrapper .sidebar-logo a.logo {
+    user-select: none;
+    cursor: pointer;
+    font-family: Brandon_light, sans-serif;
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 4px;
+    margin: auto;
+    color: #6d6d6d;
+}
+
+.wrapper .content {
+    /*background-color: #1d1d1d;*/
+}
+
+header {
+    display: grid;
+    padding: 8vh 16.5vw 0;
+    z-index: 1;
+}
+
+.wrapper .header-menu a {
+    text-transform: uppercase;
+}
+
+.wrapper .header-menu a {
+    color: #ffffff;
+}
+
+.wrapper.dark .header-menu .active a,
+.wrapper.dark .header-menu a:hover {
+    color: #a1a1a1;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-menu li {
+    height: 2em;
+    position: relative;
+    margin-right: 7em;
+}
+
+.header-menu li:last-child {
+    margin-right: 0;
+}
+
+.header-menu li.active:after {
+    content: '';
+    display: block;
+    width: 1.5em;
+    position: absolute;
+    left: -0.5em;
+    bottom: 0;
+}
+
+.wrapper .header-menu li.active:after {
+    border-bottom: 1px solid #ffffff;
+}
+
+.main {
+    padding: 5vh 16vw 0 16vw;
+}
+
+.main.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.main.home-authorized {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    align-items: flex-start;
+
+}
+
+.main .logo-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 8.5em;
+    z-index: 1;
+    user-select: none;
+}
+
+.main .add-tool-form {
+    width: 41.5%;
+    margin: 5em auto;
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ebebeb;
+}
+
+.main input,
+.main select {
+    width: 30em;
+    margin: 0 0 1em 0;
+    padding: 0.7em 0.5em 0.3em 0.5em;
+    letter-spacing: 1px;
+    border: none;
+    border-bottom: solid 1px rgba(151, 151, 151, 0.26);
+    outline: none;
+}
+
+.main input {
+    width: 29em;
+}
+
+.wrapper .main select,
+.wrapper .main input {
+    background-color: transparent;
+    outline: none;
+}
+
+.wrapper .main select option {
+    outline: none;
+    letter-spacing: 1px;
+    opacity: 0.75;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.main input.error,
+.main input.error:hover {
+    border-bottom: solid 1px red;
+}
+
+.main input,
+.main input::placeholder,
+.main select,
+.main select::placeholder {
+    font-family: Brandon_light, sans-serif;
+    font-size: 18px;
+    color: #afafaf;
+}
+
+.main input:focus,
+.main input:hover {
+    border-bottom: solid 1px #ffffff;
+}
+
+.main .sign-up-form,
+.main .sign-in-form {
+    padding: 5em 30em 0 40em;
+}
+
+.main .sign-up-form .result,
+.main .sign-in-form .result {
+    font-size: 21px;
+    font-family: 'Brandon_light', sans-serif;
+    color: #ffffff;
+    margin: 2em;
+    margin-bottom: 0.5em;
+}
+
+.main button.add-tool {
+    margin: 3em 0 0 0;
+}
+
+.main button.send,
+.main button.add-tool,
+.main button.add-tool-form-btn,
+.main button.btn-delete,
+.main button.btn-edit,
+.main button.btn-save,
+.main button.btn-cancel{
+    width: 10.7em;
+    height: 2.8em;
+    font-family: Brandon_med, sans-serif;
+    color: black;
+    background-color: #b5b5b5;
+    text-transform: uppercase;
+    border: solid 1px #000000;
+    outline: none;
+    cursor: pointer;
+}
+
+.main button.add-tool-form-btn {
+    color: white;
+    background-color: #1e1e1e;
+}
+.main button.btn-delete,
+.main button.btn-edit,
+.main button.btn-save,
+.main button.btn-cancel{
+    width: 6.7em;
+    color: white;
+    background-color: #1e1e1e;
+    margin-right: 1em;
+}
+.wrapper .sign-up-form button:hover,
+.main .sign-in-form button:hover,
+.main button.add-tool:hover {
+    background-color: #ffffff;
+    border: solid 1px #000000;
+}
+
+.main button.add-tool-form-btn:hover,
+.main button.btn-delete:hover,
+.main button.btn-edit:hover,
+.main button.btn-save:hover,
+.main button.btn-cancel:hover{
+    background-color: black;
+    border: solid 1px white;
+}
+
+.wrapper .sign-up-form button.send,
+.main .sign-in-form button.send {
+    background-color: #1d1d1d;
+}
+
+.main .your-tools {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2em;
+    margin-top: 3em;
+}
+.main .tool-box p.number{
+    display: inline-block;
+    border: 1px solid white;
+    padding: 0.5em;
+    margin: 0;
+}
+
+.main .tool-box .deleted-state{
+
+}
+.main .tool-box {
+    padding: 2em;
+    color: white;
+    font-size: 16px;
+    background: rgba(225, 225, 225, 0.1);
+}
+.main .info-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-bottom: 2em;
+}
+/*.wrapper.light .main.contact-content button.send {*/
+/*background-color: #e2e2e2; }*/
+
+@media (max-width: 1280px) {
+    .wrapper .main.main-content h1 {
+        font-size: 72px;
+    }
+
+    body,
+    .wrapper h2,
+    .header-menu,
+    .wrapper .sidebar-logo a.logo {
+        font-size: 10px;
+    }
+
+    .news a,
+    .sidebar-menu a {
+        font-size: 8px;
+    }
+
+    footer .theme {
+        font-size: 14px;
+    }
+
+    footer a.question {
+        font-size: 12px;
+    }
+
+    .header-menu li:first-child {
+        margin-right: 36%;
+    }
+
+    .wrapper .main.main-content .background {
+        height: 99%;
+    }
+}
+
+@media (max-width: 950px) {
+    .wrapper .main.main-content h1 {
+        font-size: 53px;
+    }
+
+    .header-menu li:first-child {
+        margin-right: 26%;
+    }
+
+    .wrapper .main.main-content .background {
+        height: 84%;
+    }
+
+    header {
+        grid-gap: 14%;
+    }
+}

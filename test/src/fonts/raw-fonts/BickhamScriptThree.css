@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'BickhamScriptThree';
+    src: url('fonts/BickhamScriptThree.eot');
+    src: url('fonts/BickhamScriptThree.eot') format('embedded-opentype'),
+         url('fonts/BickhamScriptThree.woff2') format('woff2'),
+         url('fonts/BickhamScriptThree.woff') format('woff'),
+         url('fonts/BickhamScriptThree.ttf') format('truetype'),
+         url('fonts/BickhamScriptThree.svg#BickhamScriptThree') format('svg');
+}

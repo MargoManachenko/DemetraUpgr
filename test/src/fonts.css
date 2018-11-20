@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'BickhamScriptThree';
+    src: url('fonts/BickhamScriptThree.eot');
+    src: url('fonts/BickhamScriptThree.eot') format('embedded-opentype'),
+    url('fonts/BickhamScriptThree.woff2') format('woff2'),
+    url('fonts/BickhamScriptThree.woff') format('woff'),
+    url('fonts/BickhamScriptThree.ttf') format('truetype'),
+    url('fonts/BickhamScriptThree.svg#BickhamScriptThree') format('svg');
+}
+
+@font-face {
+    font-family: 'Brandon_light';
+    src: url('fonts/Brandon_light.eot');
+    src: url('fonts/Brandon_light.eot') format('embedded-opentype'),
+    url('fonts/Brandon_light.woff2') format('woff2'),
+    url('fonts/Brandon_light.woff') format('woff'),
+    url('fonts/Brandon_light.ttf') format('truetype'),
+    url('fonts/Brandon_light.svg#Brandon_light') format('svg');
+}
+
+@font-face {
+    font-family: 'Brandon_med';
+    src: url('fonts/Brandon_med.eot');
+    src: url('fonts/Brandon_med.eot') format('embedded-opentype'),
+    url('fonts/Brandon_med.woff2') format('woff2'),
+    url('fonts/Brandon_med.woff') format('woff'),
+    url('fonts/Brandon_med.ttf') format('truetype'),
+    url('fonts/Brandon_med.svg#Brandon_med') format('svg');
+}
+
+@font-face {
+    font-family: 'Brandon_bld';
+    src: url('fonts/Brandon_bld.eot');
+    src: url('fonts/Brandon_bld.eot') format('embedded-opentype'),
+    url('fonts/Brandon_bld.woff2') format('woff2'),
+    url('fonts/Brandon_bld.woff') format('woff'),
+    url('fonts/Brandon_bld.ttf') format('truetype'),
+    url('fonts/Brandon_bld.svg#Brandon_bld') format('svg');
+}
+
+@font-face {
+    font-family: 'Brandon_blk';
+    src: url('fonts/Brandon_blk.eot');
+    src: url('fonts/Brandon_blk.eot') format('embedded-opentype'),
+    url('fonts/Brandon_blk.woff2') format('woff2'),
+    url('fonts/Brandon_blk.woff') format('woff'),
+    url('fonts/Brandon_blk.ttf') format('truetype'),
+    url('fonts/Brandon_blk.svg#Brandon_blk') format('svg');
+}
+
