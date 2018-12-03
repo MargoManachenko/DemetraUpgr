@@ -91,4 +91,42 @@ router.post('/editTool', (req, res) => {
     });
 });
 
+router.post('/search', (req, res) => {
+    const baseTypeSearch = req.body.baseTypeSearch;
+    const specificTypeSearch = req.body.specificTypeSearch;
+    const nameSearch = req.body.nameSearch;
+
+    let query;
+    let searchInfo = "";
+
+    if(baseTypeSearch){
+        query = {baseType: baseTypeSearch, specificType: specificTypeSearch};
+        searchInfo = "Search result for: type - " + specificTypeSearch;
+    }
+    if(nameSearch){
+        query = {toolName: nameSearch};
+        searchInfo = "Search result for: name - " + nameSearch;
+    }
+    if(baseTypeSearch && nameSearch){
+        query = {baseType: baseTypeSearch, specificType: specificTypeSearch, toolName: nameSearch};
+        searchInfo = "Search result for: type - " + specificTypeSearch + ", name - " + nameSearch;
+    }
+    Equipment.find(query ,(err, list) => {
+        if(err){
+            console.log(err);
+            return res.send({
+                success: false
+            })
+        }
+        else{
+            console.log(list);
+            return res.send({
+                success: true,
+                searchList: list,
+                searchInfo: searchInfo
+            })
+        }
+    })
+});
+
 module.exports = router;

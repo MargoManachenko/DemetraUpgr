@@ -178,7 +178,7 @@ header {
 }
 
 .main input,
-.main select{
+.main select {
     width: 30em;
     margin: 0 0 1em 0;
     padding: 0.7em 0.5em 0.3em 0.5em;
@@ -239,8 +239,6 @@ header {
     margin-bottom: 0.5em;
 }
 
-
-
 .main button.add-tool {
     margin: 3em 0 0 0;
 }
@@ -251,7 +249,8 @@ header {
 .main button.btn-delete,
 .main button.btn-edit,
 .main button.btn-save,
-.main button.btn-cancel{
+.main button.btn-cancel,
+.main button.search {
     width: 10.7em;
     height: 2.8em;
     font-family: Brandon_med, sans-serif;
@@ -263,11 +262,16 @@ header {
     cursor: pointer;
 }
 
+.main button.search {
+    height: auto;
+}
+
 .main button.btn-delete,
 .main button.btn-edit,
 .main button.btn-save,
 .main button.btn-cancel,
-button.send{
+button.send,
+.main button.search {
     width: 6.7em;
     color: white;
     background-color: transparent;
@@ -284,46 +288,84 @@ button.send{
     border: solid 2px white;
 }
 
+.main button.search:hover{
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 3px 0 white;
+
+}
+
 .main .your-tools {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 2em;
     margin-top: 3em;
 }
-.main .tool-box p.number{
+
+.main .tool-box p.number {
     display: inline-block;
     border: 1px solid white;
     padding: 0.7em 1em;
     margin: 0;
 }
 
-.main .tool-box .deleted-state{
+.main .tool-box .deleted-state {
 
 }
+
 .main .tool-box {
     padding: 2em;
     color: white;
     font-size: 16px;
     background: rgba(225, 225, 225, 0.1);
 }
-.main .info-box{
+
+.main .info-box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     margin-bottom: 2em;
 }
 
-.main .info-box p{
+.main .info-box p {
     display: block;
     height: 1em;
 }
 
-.main .searchbar select{
+.main .searchBar {
+    margin: 3em 0 3em 0;
+}
+
+.main .searchbar,
+.main .searchBar {
+    display: flex;
+    width: 100%;
+}
+
+.main .searchbar select {
+    width: 100%;
+    margin: 0;
     color: white;
 }
-.main .searchbar select:disabled{
+
+.main .searchBar input {
+    margin: 0;
+}
+.main .searchBar input:focus,
+.main .searchBar select:focus{
+    box-shadow: 0 0 3px 0 white;
+}
+.main .searchbar select:disabled {
     color: #afafaf;
 }
+
+.main .searchBar select,
+.main .searchBar input {
+    padding: 0.7em 0.5em 0.7em 0.7em;
+    border: solid 1px white;
+    border-right: none;
+}
+
 /*.wrapper.light .main.contact-content button.send {*/
 /*background-color: #e2e2e2; }*/
 

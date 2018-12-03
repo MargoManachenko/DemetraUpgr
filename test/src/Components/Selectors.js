@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Selectors = (props)=>(
-    <div className="searchbar">
+const Selectors = (props) => (
+    <div className={props.className ? "searchbar" : null}>
         <select name="baseType" onChange={props.handleTypeChange}>
             {!props.search && <option value="0">Choose base equipment type</option>}
             <option value="1">Livestock equipment</option>
@@ -13,7 +13,7 @@ const Selectors = (props)=>(
 
         {/*Only for search bar*/}
         {!props.search &&
-        <select name="specificType" disabled="disabled"  style={{display: props.baseType === '0' ? "block" : "none"}}>
+        <select name="specificType" disabled="disabled" style={{display: props.baseType === '0' ? "block" : "none"}}>
             <option value="null">Specific Type</option>
         </select>}
         {/*Only for search bar*/}

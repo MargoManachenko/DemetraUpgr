@@ -39,7 +39,7 @@ class AddToolForm extends React.Component {
             errors.quantity = "please, enter tool's quantity"
         }
         if (Object.keys(errors).length === 0) {
-            const response = await fetch('/tool/addTool', {
+            const responce = await fetch('/tool/addTool', {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'
@@ -53,7 +53,7 @@ class AddToolForm extends React.Component {
                     specificType: specificType
                 })
             });
-            const res = await response.json();
+            const res = await responce.json();
             console.log(res);
 
             this.setState({

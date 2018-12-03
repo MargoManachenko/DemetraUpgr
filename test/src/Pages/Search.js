@@ -7,8 +7,8 @@ class Search extends React.Component{
         return(
             <Base>
                 <div className="main search">
-                    <h2>Search a tool or equipment</h2>
-                    <SearchBar/>
+                    <h2>Search for a tool or equipment</h2>
+                    <SearchBar />
                 </div>
             </Base>
         )
