@@ -14,7 +14,7 @@ ul {
 .wrapper {
     display: grid;
     min-height: 100vh;
-    background-image: url('./public/background3.jpg');
+    background-image: url('./public/backgr.png');
     background-size: cover;
 
 }
@@ -46,19 +46,21 @@ ul {
 .wrapper h2,
 .wrapper h3 {
     font-family: Brandon_light, sans-serif;
-    font-size: 24px;
+    font-size: 36px;
     line-height: 1.6;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
+    font-weight: 100;
     margin: auto;
     text-align: center;
     width: 100%;
     border-bottom: 1px solid white;
-    color: #b5b5b5;
+    color: white;
 }
 
 .wrapper h3 {
     border-bottom: none;
-    font-size: 18px;
+    font-size: 21px;
+    margin-bottom: 1em;
 }
 
 .main .add-tool-form h3 {
@@ -139,7 +141,7 @@ header {
 }
 
 .main {
-    padding: 5vh 16vw 0 16vw;
+    padding: 5vh 12vw 5vh 12vw;
 }
 
 .main.main-content {
@@ -176,7 +178,7 @@ header {
 }
 
 .main input,
-.main select {
+.main select{
     width: 30em;
     margin: 0 0 1em 0;
     padding: 0.7em 0.5em 0.3em 0.5em;
@@ -200,8 +202,8 @@ header {
     outline: none;
     letter-spacing: 1px;
     opacity: 0.75;
-    background-color: black;
-    border: 1px solid black;
+    background-color: whitesmoke;
+    color: gray;
 }
 
 .main input.error,
@@ -237,6 +239,8 @@ header {
     margin-bottom: 0.5em;
 }
 
+
+
 .main button.add-tool {
     margin: 3em 0 0 0;
 }
@@ -251,46 +255,33 @@ header {
     width: 10.7em;
     height: 2.8em;
     font-family: Brandon_med, sans-serif;
-    color: black;
-    background-color: #b5b5b5;
+    color: white;
+    background-color: transparent;
     text-transform: uppercase;
-    border: solid 1px #000000;
+    border: solid 1px white;
     outline: none;
     cursor: pointer;
 }
 
-.main button.add-tool-form-btn {
-    color: white;
-    background-color: #1e1e1e;
-}
 .main button.btn-delete,
 .main button.btn-edit,
 .main button.btn-save,
-.main button.btn-cancel{
+.main button.btn-cancel,
+button.send{
     width: 6.7em;
     color: white;
-    background-color: #1e1e1e;
+    background-color: transparent;
     margin-right: 1em;
 }
-.wrapper .sign-up-form button:hover,
-.main .sign-in-form button:hover,
-.main button.add-tool:hover {
-    background-color: #ffffff;
-    border: solid 1px #000000;
-}
 
+.main button.send:hover,
+.main button.add-tool:hover,
 .main button.add-tool-form-btn:hover,
 .main button.btn-delete:hover,
 .main button.btn-edit:hover,
 .main button.btn-save:hover,
 .main button.btn-cancel:hover{
-    background-color: black;
-    border: solid 1px white;
-}
-
-.wrapper .sign-up-form button.send,
-.main .sign-in-form button.send {
-    background-color: #1d1d1d;
+    border: solid 2px white;
 }
 
 .main .your-tools {
@@ -302,7 +293,7 @@ header {
 .main .tool-box p.number{
     display: inline-block;
     border: 1px solid white;
-    padding: 0.5em;
+    padding: 0.7em 1em;
     margin: 0;
 }
 
@@ -320,6 +311,18 @@ header {
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     margin-bottom: 2em;
+}
+
+.main .info-box p{
+    display: block;
+    height: 1em;
+}
+
+.main .searchbar select{
+    color: white;
+}
+.main .searchbar select:disabled{
+    color: #afafaf;
 }
 /*.wrapper.light .main.contact-content button.send {*/
 /*background-color: #e2e2e2; }*/

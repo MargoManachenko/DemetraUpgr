@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 import Home from '../Pages/Home';
-import HomeAuthorized from '../Pages/HomeAuthorized';
+import Search from '../Pages/Search';
 import SignIn from '../Pages/SignIn';
 import SignUp from '../Pages/SignUp';
 
@@ -19,7 +19,7 @@ class Main extends React.Component {
             <main>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route path="/home" component={HomeAuthorized}/>
+                    <Route path="/search" component={Search}/>
                     <Route path="/signIn" component={SignIn}/>
                     <Route path="/signUp" component={SignUp}/>
                 </Switch>

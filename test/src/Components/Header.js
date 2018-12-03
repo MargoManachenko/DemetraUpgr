@@ -15,7 +15,8 @@ class Header extends React.Component {
             return (
                 <header>
                     <ul className="header-menu">
-                        <li className={activeClass("/")}><Link to="/home">Home</Link></li>
+                        <li className={activeClass("/")}><Link to="/">Home</Link></li>
+                        <li className={activeClass("/search")}><Link to="/search">Search</Link></li>
                         <li className={activeClass("/signOut")}><Link to="/signOut">Sign Out</Link></li>
                     </ul>
                 </header>

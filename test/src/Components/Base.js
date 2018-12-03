@@ -8,9 +8,7 @@ class Base extends React.Component {
         this.state = {};
     };
 
-
     render() {
-
         return (
             <div className="wrapper">
                 <div className="content">

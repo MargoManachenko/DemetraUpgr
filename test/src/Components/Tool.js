@@ -115,8 +115,8 @@ class Tool extends React.Component {
                             <p>{this.state.toolQuantity}</p>
                         </div>
                     </div>
-                    <button className="btn-delete" onClick={this.DeleteTool}>delete</button>
                     <button className="btn-edit" onClick={this.EditTool}>edit</button>
+                    <button className="btn-delete" onClick={this.DeleteTool}>delete</button>
                 </div>
             )
     }
