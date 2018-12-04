@@ -1,5 +1,6 @@
 import React from 'react';
 import Selectors from '../Components/Selectors';
+import props from "../Pages/Home";
 
 class AddToolForm extends React.Component {
 
@@ -9,7 +10,7 @@ class AddToolForm extends React.Component {
         this.state = {
             userId: localStorage.userId,
             baseType: '0',
-            specificType: '',
+            specificType: '0',
             toolName: '',
             toolInfo: '',
             toolQuantity: '',
@@ -22,6 +23,7 @@ class AddToolForm extends React.Component {
         this.handleAddingTool = this.handleAddingTool.bind(this);
     }
 
+
     handleTypeChange(e) {
         this.setState({
             [e.target.name]: e.target.value
@@ -31,6 +33,7 @@ class AddToolForm extends React.Component {
     handleAddingTool = async (e) => {
         e.preventDefault();
         const {toolName, toolInfo, toolQuantity, baseType, specificType} = this.state;
+        console.log(this.state)
         let errors = {};
         if (toolName === "") {
             errors.name = "please, enter tool's name"
@@ -58,7 +61,11 @@ class AddToolForm extends React.Component {
 
             this.setState({
                 success: res.success
-            }, console.log(this.state))
+            });
+
+            if(res.success){
+                this.props.HandleAddingTool(res.newTool);
+            }
         }
         else {
             this.setState({

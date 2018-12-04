@@ -15,8 +15,7 @@ ul {
     display: grid;
     min-height: 100vh;
     background-image: url('./public/backgr.png');
-    background-size: cover;
-
+    background-attachment: fixed;
 }
 
 .wrapper a {
@@ -217,7 +216,7 @@ header {
 .main select::placeholder {
     font-family: Brandon_light, sans-serif;
     font-size: 18px;
-    color: #afafaf;
+    color: white;
 }
 
 .main input:focus,
@@ -250,7 +249,8 @@ header {
 .main button.btn-edit,
 .main button.btn-save,
 .main button.btn-cancel,
-.main button.search {
+.main button.search ,
+.main button.btn-publish{
     width: 10.7em;
     height: 2.8em;
     font-family: Brandon_med, sans-serif;
@@ -271,7 +271,8 @@ header {
 .main button.btn-save,
 .main button.btn-cancel,
 button.send,
-.main button.search {
+.main button.search,
+.main button.btn-publish{
     width: 6.7em;
     color: white;
     background-color: transparent;
@@ -288,13 +289,19 @@ button.send,
     border: solid 2px white;
 }
 
-.main button.search:hover{
+.main button.search:hover,
+.main button.btn-publish:hover{
     background-color: white;
     color: black;
     box-shadow: 0 0 3px 0 white;
 
-}
 
+}
+.search-info{
+    font-family: Brandon_light, sans-serif ;
+    color: white;
+    font-size: 21px;
+}
 .main .your-tools {
     display: grid;
     grid-template-columns: 1fr 1fr;

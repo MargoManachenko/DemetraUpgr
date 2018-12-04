@@ -7,7 +7,7 @@ class SearchBar extends React.Component {
         super(props);
         this.state = {
             baseType: '0',
-            specificType: '',
+            specificType: '0',
             nameSearch: '',
             searchList: null,
             success: null,
@@ -21,6 +21,15 @@ class SearchBar extends React.Component {
         this.setState({
             [e.target.name]: e.target.value
         });
+        // if(e.target.name === )
+        // , ()=>{
+        //     if(this.state.baseType === "0"){
+        //         this.setState({
+        //             specificType: 0
+        //         })
+        //     }
+        //     console.log(this.state)
+        // });
     }
 
     SearchTool = async (e) => {
@@ -41,7 +50,6 @@ class SearchBar extends React.Component {
                 })
             });
             const res = await responce.json();
-            console.log("123")
             this.setState({
                 success: res.success,
                 searchList: res.searchList,
@@ -52,15 +60,18 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <div className="searchBar">
-                <Selectors
-                    handleTypeChange={this.handleTypeChange}
-                    baseType={this.state.baseType}
-                    searchBar={true}
-                    className="searchbar"
-                />
-                <input type="text" placeholder="Name" name="nameSearch" onChange={this.handleTypeChange}/>
-                <button className="search" onClick={this.SearchTool}>Search</button>
+            <div className="searchBlock">
+                <div className="searchBar">
+                    <Selectors
+                        handleTypeChange={this.handleTypeChange}
+                        baseType={this.state.baseType}
+                        searchBar={true}
+                        className="searchbar"
+                    />
+                    <input type="text" placeholder="Name" name="nameSearch" onChange={this.handleTypeChange}/>
+                    <button className="search" onClick={this.SearchTool}>Search</button>
+                </div>
+                <p className="search-info">{this.state.searchInfo}</p>
                 <div className="your-tools">
                     {this.state.searchList ?
                         this.state.searchList.map((tool, index) => (

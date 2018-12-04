@@ -22,14 +22,14 @@ const Selectors = (props) => (
         <select name="specificType" onChange={props.handleTypeChange}
                 style={{display: props.baseType === '1' ? "block" : "none"}}>
             <option value="0"> Beekeeping equipment</option>
-            <option value="1">Feed Extruders</option>
-            <option value="2">Poultry equipment</option>
+            <option value="1"> Feed Extruders</option>
+            <option value="2"> Poultry equipment</option>
             <option value="3"> Equipment for pig breeding</option>
             <option value="4"> Drinkers and accessories</option>
             <option value="5"> Veterinary equipment</option>
-            <option value="5"> Milk analyzers</option>
-            <option value="5"> Feed Grades</option>
-            <option value="5"> Livestock equipment, general</option>
+            <option value="6"> Milk analyzers</option>
+            <option value="7"> Feed Grades</option>
+            <option value="8"> Livestock equipment, general</option>
         </select>
 
         {/*Equipment for crop production*/}

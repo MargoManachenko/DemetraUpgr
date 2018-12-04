@@ -16,6 +16,7 @@ class HomeAuthorized extends React.Component {
         };
         this.showAddDialogue = this.showAddDialogue.bind(this);
         this.GetAllOwnedTools = this.GetAllOwnedTools.bind(this);
+        this.HandleAddingTool = this.HandleAddingTool.bind(this);
     }
 
     componentWillMount() {
@@ -24,7 +25,7 @@ class HomeAuthorized extends React.Component {
     }
 
     async GetAllOwnedTools() {
-        if(localStorage.getItem('userId')){
+        if (localStorage.getItem('userId')) {
             const response = await fetch('/tool/getTools', {
                 method: "POST",
                 headers: {
@@ -42,9 +43,20 @@ class HomeAuthorized extends React.Component {
 
     }
 
+    HandleAddingTool(newTool) {
+        console.log("yey", newTool)
+        let newToolsList = this.state.listOfTools;
+        newToolsList.push(newTool)
+        this.setState({
+            addingToolBtn: !this.state.addingToolBtn,
+            listOfTools: newToolsList
+        })
+    }
+
+
     showAddDialogue() {
         this.setState({
-            addingTool: !this.state.addingTool,
+            addingTool: true,
             addingToolBtn: !this.state.addingToolBtn
         })
     }
@@ -57,7 +69,10 @@ class HomeAuthorized extends React.Component {
                         <h2>List of your tools</h2>
                         <button className="add-tool"
                                 onClick={this.showAddDialogue}>{this.state.addingToolBtn ? "Cancel" : "Add new"} </button>
-                        {this.state.addingTool ? <AddToolForm/> : null}
+                        {this.state.addingTool ?
+                            <AddToolForm
+                                HandleAddingTool={this.HandleAddingTool}
+                            /> : null}
                         <div className="your-tools">
                             {this.state.listOfTools.length !== 0 ?
                                 this.state.listOfTools.map((tool, index) => (
