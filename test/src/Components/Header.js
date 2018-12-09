@@ -9,6 +9,13 @@ class Header extends React.Component {
 
     }
 
+    LogOut(e) {
+        e.preventDefault();
+        Auth.deauthenticateUser();
+        window.location = "/";
+    }
+
+
     render() {
         const activeClass = (route) => { return window.location.pathname === route ? "active" : null };
         if(Auth.isUserAuthenticated()){
@@ -17,7 +24,7 @@ class Header extends React.Component {
                     <ul className="header-menu">
                         <li className={activeClass("/")}><Link to="/">Home</Link></li>
                         <li className={activeClass("/search")}><Link to="/search">Search</Link></li>
-                        <li className={activeClass("/signOut")}><Link to="/signOut">Sign Out</Link></li>
+                        <li className={activeClass("/signOut")}><Link to="/" onClick={this.LogOut}>Sign Out</Link></li>
                     </ul>
                 </header>
             )

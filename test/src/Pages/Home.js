@@ -96,7 +96,8 @@ class HomeAuthorized extends React.Component {
             return (
                 <Base>
                     <div className="main main-content">
-                        <h1>This is home for an unauthorised user.</h1>
+                        <h1>Welcome to Demetra</h1>
+                        <h2>search a tool</h2>
                         <SearchBar/>
                     </div>
                 </Base>

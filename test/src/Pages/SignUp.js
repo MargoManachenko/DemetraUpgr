@@ -88,7 +88,7 @@ class SignUp extends React.Component {
                                onChange={this.handleChange}/>
                         <input type="text" name="email" autoComplete="off" placeholder="Email"
                                onChange={this.handleChange}/>
-                        <input type="text" name="password" autoComplete="off" placeholder="Password"
+                        <input type="password" name="password" autoComplete="off" placeholder="Password"
                                onChange={this.handleChange}/>
                         <button className="send">Sign Up</button>
                         <p className="result">{this.state.response}</p>
