@@ -2,25 +2,25 @@ import React from 'react';
 
 const Selectors = (props) => (
     <div className={props.className ? "searchbar" : null}>
-        <select name="baseType" onChange={props.handleTypeChange}>
+        <select name="baseTypeNum" onChange={props.handleTypeChangeSelectors}>
             {!props.search && <option value="0">Choose base equipment type</option>}
-            <option value="1">Livestock equipment</option>
-            <option value="2">Equipment for crop production</option>
-            <option value="3">Equipment for growing and processing grain</option>
-            <option value="4">Sorting agricultural equipment</option>
-            <option value="5">Fisheries equipment</option>
+            <option value="1" selected={ props.baseTypeNum === "1"}>Livestock equipment</option>
+            <option value="2" selected={ props.baseTypeNum === "2"}>Equipment for crop production</option>
+            <option value="3" selected={ props.baseTypeNum === "3"}>Equipment for growing and processing grain</option>
+            <option value="4" selected={ props.baseTypeNum === "4"}>Sorting agricultural equipment</option>
+            <option value="5" selected={ props.baseTypeNum === "5"}>Fisheries equipment</option>
         </select>
 
         {/*Only for search bar*/}
         {!props.search &&
-        <select name="specificType" disabled="disabled" style={{display: props.baseType === '0' ? "block" : "none"}}>
+        <select name="specificTypeNum" disabled="disabled" style={{display: props.baseTypeNum === '0' ? "block" : "none"}}>
             <option value="null">Specific Type</option>
         </select>}
         {/*Only for search bar*/}
 
         {/*Livestock equipment*/}
-        <select name="specificType" onChange={props.handleTypeChange}
-                style={{display: props.baseType === '1' ? "block" : "none"}}>
+        <select name="specificTypeNum" onChange={props.handleTypeChangeSelectors}
+                style={{display: props.baseTypeNum === '1' ? "block" : "none"}}>
             <option value="0"> Beekeeping equipment</option>
             <option value="1"> Feed Extruders</option>
             <option value="2"> Poultry equipment</option>
@@ -33,8 +33,8 @@ const Selectors = (props) => (
         </select>
 
         {/*Equipment for crop production*/}
-        <select name="specificType" onChange={props.handleTypeChange}
-                style={{display: props.baseType === '2' ? "block" : "none"}}>
+        <select name="specificTypeNum" onChange={props.handleTypeChangeSelectors}
+                style={{display: props.baseTypeNum === '2' ? "block" : "none"}}>
             <option value="0">Biomass Processing Equipment</option>
             <option value="1">Greenhouses</option>
             <option value="2">Greenhouses accessorise</option>
@@ -45,8 +45,8 @@ const Selectors = (props) => (
         </select>
 
         {/*Equipment for growing and processing grain*/}
-        <select name="specificType" onChange={props.handleTypeChange}
-                style={{display: props.baseType === '3' ? "block" : "none"}}>
+        <select name="specificTypeNum" onChange={props.handleTypeChangeSelectors}
+                style={{display: props.baseTypeNum === '3' ? "block" : "none"}}>
             <option value="0">Vibropneumatic tables</option>
             <option value="1">Grain loaders</option>
             <option value="2">Grain Cleaning Machines</option>
@@ -56,8 +56,8 @@ const Selectors = (props) => (
         </select>
 
         {/*Sorting agricultural equipment*/}
-        <select name="specificType" onChange={props.handleTypeChange}
-                style={{display: props.baseType === '4' ? "block" : "none"}}>
+        <select name="specificTypeNum" onChange={props.handleTypeChangeSelectors}
+                style={{display: props.baseTypeNum === '4' ? "block" : "none"}}>
             <option value="0">Photoseparator</option>
             <option value="1"> Cleaner</option>
             <option value="2"> Garden sieve</option>
@@ -67,8 +67,8 @@ const Selectors = (props) => (
         </select>
 
         {/*Fisheries equipment*/}
-        <select name="specificType" onChange={props.handleTypeChange}
-                style={{display: props.baseType === '5' ? "block" : "none"}}>
+        <select name="specificTypeNum" onChange={props.handleTypeChangeSelectors}
+                style={{display: props.baseTypeNum === '5' ? "block" : "none"}}>
             <option value="0">Water softeners</option>
             <option value="1">PH meter</option>
             <option value="2">Oxygenators</option>

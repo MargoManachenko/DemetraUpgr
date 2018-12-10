@@ -77,6 +77,25 @@ ul {
     margin-bottom: 0;
 }
 
+.tool-img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 3em;
+}
+
+.main .add-tool-form input[type = file] {
+    border-bottom: none;
+}
+
+h3.add-tool-result {
+    display: inline-block;
+    position: absolute;
+    top: 7em;
+    left: 20em;
+    text-align: left;
+    width: 55%;
+}
+
 .wrapper .sidebar-logo a.logo {
     user-select: none;
     cursor: pointer;
@@ -249,8 +268,9 @@ header {
 .main button.btn-edit,
 .main button.btn-save,
 .main button.btn-cancel,
-.main button.search ,
-.main button.btn-publish{
+.main button.search,
+.main button.btn-publish,
+.btn-contact {
     width: 10.7em;
     height: 2.8em;
     font-family: Brandon_med, sans-serif;
@@ -272,7 +292,7 @@ header {
 .main button.btn-cancel,
 button.send,
 .main button.search,
-.main button.btn-publish{
+.main button.btn-publish {
     width: 6.7em;
     color: white;
     background-color: transparent;
@@ -285,23 +305,31 @@ button.send,
 .main button.btn-delete:hover,
 .main button.btn-edit:hover,
 .main button.btn-save:hover,
-.main button.btn-cancel:hover{
+.main button.btn-cancel:hover,
+.btn-contact:hover {
     border: solid 2px white;
 }
 
 .main button.search:hover,
-.main button.btn-publish:hover{
+.main button.btn-publish:hover,
+.btn-contact:hover {
     background-color: white;
     color: black;
     box-shadow: 0 0 3px 0 white;
 
-
 }
-.search-info{
-    font-family: Brandon_light, sans-serif ;
+
+.search-info {
+    font-family: Brandon_light, sans-serif;
     color: white;
     font-size: 21px;
 }
+
+.result-edit-tool {
+    display: inline;
+    margin-left: 1em;
+}
+
 .main .your-tools {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -321,6 +349,7 @@ button.send,
 }
 
 .main .tool-box {
+    height: fit-content;
     padding: 2em;
     color: white;
     font-size: 16px;
@@ -329,14 +358,18 @@ button.send,
 
 .main .info-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
+    grid-template-columns: 0.5fr 1fr 1fr;
+    justify-items: left;
     margin-bottom: 2em;
+}
+
+.main .info-box img {
+    width: 100%;
 }
 
 .main .info-box p {
     display: block;
-    height: 1em;
+    height: 2em;
 }
 
 .main .searchBar {
@@ -358,10 +391,12 @@ button.send,
 .main .searchBar input {
     margin: 0;
 }
+
 .main .searchBar input:focus,
-.main .searchBar select:focus{
+.main .searchBar select:focus {
     box-shadow: 0 0 3px 0 white;
 }
+
 .main .searchbar select:disabled {
     color: #afafaf;
 }

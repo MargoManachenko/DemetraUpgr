@@ -1,5 +1,6 @@
 import React from 'react';
 import EditTooldForm from '../Components/EditToolForm';
+import noImgIcon from '../public/no-image-icon.jpg';
 
 class Tool extends React.Component {
     constructor(props) {
@@ -9,9 +10,12 @@ class Tool extends React.Component {
             toolId: props.toolId,
             baseType: props.baseType,
             specificType: props.specificType,
+            baseTypeNum: props.baseTypeNum,
+            specificTypeNum: props.specificTypeNum,
             toolName: props.toolName,
             toolInfo: props.toolInfo,
             toolQuantity: props.toolQuantity,
+            image: props.image,
             deleted: false,
             editing: false,
             message: ''
@@ -21,6 +25,14 @@ class Tool extends React.Component {
         this.EditTool = this.EditTool.bind(this);
         this.CancelEditing = this.CancelEditing.bind(this);
         this.ProcessedEditing = this.ProcessedEditing.bind(this);
+    }
+
+    componentWillMount() {
+        if (!this.state.image) {
+            this.setState({
+                image: noImgIcon
+            })
+        }
     }
 
     async DeleteTool() {
@@ -54,16 +66,18 @@ class Tool extends React.Component {
     ProcessedEditing(result, newTool) {
         let messageString;
         if (result) {
-            messageString = "The tool was successfully saved."
+            messageString = "Successfully saved."
         }
         else {
             messageString = "Error occurred. Please, try again later."
         }
 
+        console.log(newTool)
+
         this.setState({
             message: messageString,
-            baseType: newTool.baseType,
-            specificType: newTool.specificType,
+            baseTypeNum: newTool.baseTypeNum,
+            specificTypeNum: newTool.specificTypeNum,
             toolName: newTool.toolName,
             toolInfo: newTool.toolInfo,
             toolQuantity: newTool.toolQuantity,
@@ -83,11 +97,14 @@ class Tool extends React.Component {
                 <div className="tool-box">
                     <EditTooldForm
                         toolId={this.state.toolId}
+                        baseTypeNum={this.state.baseTypeNum}
+                        specificTypeNum={this.state.specificTypeNum}
                         baseType={this.state.baseType}
                         specificType={this.state.specificType}
                         toolName={this.state.toolName}
                         toolInfo={this.state.toolInfo}
                         toolQuantity={this.state.toolQuantity}
+                        image={this.state.image}
                         CancelEditing={this.CancelEditing}
                         ProcessedEditing={this.ProcessedEditing}
                     />
@@ -98,7 +115,7 @@ class Tool extends React.Component {
             return (
                 <div className="tool-box">
                     <p className="number">{this.props.number}</p>
-                    <p>{this.state.message}</p>
+                    <p className="result-edit-tool">{this.state.message}</p>
                     <div className="info-box">
                         <div>
                             <p>Base type:</p>
@@ -114,9 +131,11 @@ class Tool extends React.Component {
                             <p>{this.state.toolInfo}</p>
                             <p>{this.state.toolQuantity}</p>
                         </div>
+                        <img src={this.state.image} alt=""/>
                     </div>
-                    <button className="btn-edit" onClick={this.EditTool}>edit</button>
-                    <button className="btn-delete" onClick={this.DeleteTool}>delete</button>
+                    {!this.props.toolSearch && <button className="btn-edit" onClick={this.EditTool}>edit</button>}
+                    {!this.props.toolSearch && <button className="btn-delete" onClick={this.DeleteTool}>delete</button>}
+                    {this.props.toolSearch && <button className="btn-contact">contact lessor</button>}
                 </div>
             )
     }

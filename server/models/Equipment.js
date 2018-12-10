@@ -10,6 +10,12 @@ const EquipmentSchema = new mongoose.Schema({
     specificType: {
         type: String
     },
+    baseTypeNum: {
+        type: String
+    },
+    specificTypeNum: {
+        type: String
+    },
     toolName: {
         type: String
     },
@@ -18,6 +24,12 @@ const EquipmentSchema = new mongoose.Schema({
     },
     toolQuantity: {
         type: Number
+    },
+    toolPrice: {
+        type: Number
+    },
+    image: {
+        type: String
     }
 });
 
