@@ -70,8 +70,13 @@ class SignIn extends React.Component{
                 localStorage.setItem('userId', res.user.userID);
                 console.log(localStorage.getItem('userId'));
                 Auth.authenticateUser(res.token, res.user.userID);
+                window.location = "/";
             }
-
+            else{
+               this.setState({
+                   response: res.message
+               })
+            }
         }
     };
 
@@ -83,7 +88,7 @@ class SignIn extends React.Component{
                     <form onSubmit={this.sendForm} className="sign-in-form">
                         <input type="text" name="email" autoComplete="off" placeholder="Email"
                                onChange={this.handleChange}/>
-                        <input type="text" name="password" autoComplete="off" placeholder="Password"
+                        <input type="password" name="password" autoComplete="off" placeholder="Password"
                                onChange={this.handleChange}/>
                         <button className="send">Sign In</button>
                         <p className="result">{this.state.response}</p>

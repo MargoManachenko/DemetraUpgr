@@ -10,10 +10,6 @@ class Auth {
         localStorage.setItem('userId', userId);
     }
 
-    static authenticateOwner(userId) {
-        localStorage.setItem('userId', userId);
-    }
-
     /**
      * Check if a user is authenticated - check if a token is saved in Local Storage
      *
