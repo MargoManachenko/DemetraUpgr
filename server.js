@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const passport = require('passport');
 const config = require('./config');
+const path = require('path');
 
 require('./server/models').connect(config.dbUri);
 const app = express();
@@ -24,6 +25,11 @@ const authRoutes = require('./server/routes/auth');
 const toolRoutes = require('./server/routes/tool');
 app.use('/auth', authRoutes);
 app.use('/tool', toolRoutes);
+
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'))
+});
 
 const port = process.env.PORT || 5001;
 
